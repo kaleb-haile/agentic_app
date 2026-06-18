@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Zap, ArrowRight } from "lucide-react";
 import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
+import  PricingModal  from "@/components/PricingModal"
 
 
 function Header() {
@@ -27,10 +28,14 @@ function Header() {
             >
               Projects
             </Link>
+
+            <PricingModal>
+
             <span className="inline-flex h-8 items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 text-xs text-white/70">
               <Zap className="h-3 w-3 fill-white/70" />
               3/47 credits
             </span>
+            </PricingModal>
             <UserButton />
           </Show>
 
